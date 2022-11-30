@@ -1,6 +1,6 @@
 package cars;
 
-public class K5 extends Car {
+public class K5 implements Car {
 
     private static final int distancePerLiter = 13;
     private final int tripDistance;
@@ -22,5 +22,10 @@ public class K5 extends Car {
     @Override
     public String getName() {
         return "K5";
+    }
+
+    @Override
+    public double getChargeQuantity() {
+        return getTripDistance() / getDistancePerLiter();
     }
 }

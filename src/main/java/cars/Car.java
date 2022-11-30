@@ -1,10 +1,8 @@
 package cars;
 
-public abstract class Car {
-    public abstract double getDistancePerLiter();
-    public abstract double getTripDistance();
-    public abstract String getName();
-    public double getChargeQuantity() {
-        return getTripDistance() / getDistancePerLiter();
-    }
+public interface Car {
+    double getDistancePerLiter();
+    double getTripDistance();
+    String getName();
+    double getChargeQuantity();
 }

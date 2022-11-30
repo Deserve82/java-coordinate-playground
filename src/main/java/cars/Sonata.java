@@ -1,6 +1,6 @@
 package cars;
 
-public class Sonata extends Car {
+public class Sonata implements Car {
 
     private static final int distancePerLiter = 10;
     private final int tripDistance;
@@ -22,5 +22,10 @@ public class Sonata extends Car {
     @Override
     public String getName() {
         return "Sonata";
+    }
+
+    @Override
+    public double getChargeQuantity() {
+        return getTripDistance() / getDistancePerLiter();
     }
 }
