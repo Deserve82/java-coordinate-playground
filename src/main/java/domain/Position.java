@@ -26,6 +26,14 @@ public class Position {
         return y.isSame(value);
     }
 
+    public boolean isHorizontal(Position other) {
+        return !x.equals(other.x) && y.equals(other.y);
+    }
+
+    public boolean isVertical(Position other) {
+        return x.equals(other.x) && !y.equals(other.y);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -43,4 +51,7 @@ public class Position {
         return Objects.hash(x, y);
     }
 
+    public boolean isDifferent(Position other) {
+        return !x.equals(other.x) && !y.equals(other.y);
+    }
 }
